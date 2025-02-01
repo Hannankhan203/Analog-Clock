@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.analog-clock {
+    border: 15px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    /* border: 2px solid black; */
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 10px;
+}
+
+.hours-hand {
+    width: 10px;
+    height: 60px;
+    background-color: red;
+    z-index: 1;
+}
+
+.minutes-hand {
+    width: 8px;
+    height: 100px;
+    background-color: green;
+    z-index: 2;
+}
+
+.seconds-hand {
+    width: 6px;
+    height: 140px;
+    background-color: blue;
+    z-index: 3;
+}
+
+.center-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    position: absolute;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    width: 40px;
+    height: 35px;
+    line-height: 25px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 50%;
+}   
